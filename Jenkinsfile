@@ -60,9 +60,9 @@ pipeline {
     }
 
     post {
-        always {
-            echo 'Post: Archive Artifacts'
-            ls
+        success {
+            echo "Post: Archive Artifacts"
+            echo "I am in $PWD"
             archiveArtifacts artifacts: '/home/jenkins/scripts/*.txt', onlyIfSuccessful: true
         }
     }
