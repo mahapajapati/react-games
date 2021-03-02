@@ -62,6 +62,7 @@ pipeline {
     post {
         always {
             echo 'Post: Archive Artifacts'
+            ls
             archiveArtifacts artifacts: '/home/jenkins/scripts/*.txt', onlyIfSuccessful: true
         }
     }
