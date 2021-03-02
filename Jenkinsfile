@@ -63,7 +63,7 @@ pipeline {
         success {
             echo "Post: Archive Artifacts"
             echo "I am in $PWD"
-            archiveArtifacts artifacts: '**/*.txt'
+            archiveArtifacts artifacts: '/home/jenkins/workspace/result.txt'
         }
     }
 }
