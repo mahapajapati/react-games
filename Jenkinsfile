@@ -40,7 +40,8 @@ pipeline {
         stage ('test') {
             steps {
                 script {
-                    if (${params.BOOLEAN_PARAM}) {
+                    echo "The BOOLEAN_PARAM is: ${params.BOOLEAN_PARAM}"
+                    if (params.BOOLEAN_PARAM) {
                         echo "You have chosen ${params.BOOLEAN_PARAM}"
                     }
                     echo "You have chosen ${params.BOOLEAN_PARAM}"
