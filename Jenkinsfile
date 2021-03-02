@@ -32,7 +32,7 @@ pipeline {
             steps{
                 script{
                     echo "The STRING_PARAM is: ${params.STRING_PARAM}"
-                    sh "./home/jenkins/scripts/build_script.sh ${params.STRING_PARAM}"
+                    sh "/home/jenkins/scripts/build_script.sh ${params.STRING_PARAM}"
                 }
             }
         }
