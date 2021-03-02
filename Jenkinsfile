@@ -63,7 +63,7 @@ pipeline {
         success {
             echo "Post: Archive Artifacts"
             echo "I am in $PWD"
-            archiveArtifacts artifacts: "${env:WORKSPACE}/result.txt"
+            archiveArtifacts artifacts: "result.txt"
         }
     }
 }
