@@ -60,7 +60,7 @@ pipeline {
     post {
         always {
             echo 'Post: Archive Artifacts'
-            archiveArtifacts artifacts: '/home/jenkins/scripts/result.txt'
+            archiveArtifacts artifacts: '/home/jenkins/scripts/result.txt', onlyIfSuccessful: true
         }
     }
 }
